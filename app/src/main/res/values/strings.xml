@@ -4,5 +4,15 @@
     <string name="app_name">ComparePrice</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_super_market_selection">SuperMarketSelectionActivity</string>
+    <string name="title_activity_market_list">MarketListActivity</string>
+    <string name="title_activity_product_list">Lista de productos</string>
+    <string name="text_view_empty_market_list">Add Market to the list</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_add_market">Add Market</string>
+    <string name="edit_text_location">market location</string>
+    <string name="edit_text_market_name">Enter market name</string>
+    <string name="text_view_add_market_title">Adding a market</string>
+    <string name="text_view_empty_product_list">Add products for market</string>
 
 </resources>

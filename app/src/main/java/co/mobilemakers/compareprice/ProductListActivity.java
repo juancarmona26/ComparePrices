@@ -6,18 +6,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ComparePriceActivity extends ActionBarActivity {
+public class ProductListActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compare_price);
+        setContentView(R.layout.activity_product_list);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new ProductListFragment())
+                    .commit();
+        }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_compare_price, menu);
+        getMenuInflater().inflate(R.menu.menu_product_list, menu);
         return true;
     }
 
@@ -35,4 +41,5 @@ public class ComparePriceActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
