@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="market">
+        <item>Walmart</item>
+        <item>HBO</item>
+        <item>7Eleven</item>
+    </string-array>
+
+</resources>
