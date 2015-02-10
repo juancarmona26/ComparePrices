@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="products_hbo">
+        <item>bottle of milk 1L</item>
+        <item>bottle of water 500ml</item>
+        <item>yogurt 250ml</item>
+        <item>corn 1kg</item>
+        <item>Tomato 1kg</item>
+        <item>sugar 1kg</item>
+        <item>Soap</item>
+        <item>Shampoo</item>
+        <item>toothpaste</item>
+        <item>deodorant</item>
+        <item>refrigerator</item>
+        <item>microwave</item>
+
+    </string-array>
+
+
+    <string-array name="code_products_hbo">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+
+    </string-array>
+
+
+
+    <string-array name="product_prices_hbo">
+        <item>9.99</item>
+        <item>5.90</item>
+        <item>1.47</item>
+        <item>3.00</item>
+        <item>5.45</item>
+        <item>7.99</item>
+        <item>7.7</item>
+        <item>3.7</item>
+        <item>8.98</item>
+        <item>2.8</item>
+        <item>600</item>
+        <item>400</item>
+    </string-array>
+
+</resources>

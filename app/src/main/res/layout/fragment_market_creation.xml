@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.mobilemakers.compareprice.MarketCreationFragment"
+    android:orientation="vertical">
+
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:text="@string/text_view_add_market_title"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center"
+         />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <EditText android:id="@+id/edit_text_market_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_market_name"
+            android:gravity="center" />
+
+        <EditText android:id="@+id/edit_text_market_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_location"
+            android:gravity="center" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add_market"
+            android:id="@+id/button_add_market" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="products_walmart">
+        <item>bottle of milk 1L</item>
+        <item>bottle of water 500ml</item>
+        <item>yogurt 250ml</item>
+        <item>corn 1kg</item>
+        <item>Tomato 1kg</item>
+        <item>sugar 1kg</item>
+        <item>Soap</item>
+        <item>Shampoo</item>
+        <item>toothpaste</item>
+        <item>deodorant</item>
+        <item>refrigerator</item>
+        <item>microwave</item>
+
+    </string-array>
+
+    <integer-array name="code_products_walmart">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </integer-array>
+
+    <string-array name="product_prices_walmart">
+        <item>1.99</item>
+        <item>2.00</item>
+        <item>3.78</item>
+        <item>4.44</item>
+        <item>5.36</item>
+        <item>6.00</item>
+        <item>7.77</item>
+        <item>4.6</item>
+        <item>9.99</item>
+        <item>10.00</item>
+        <item>11.35</item>
+        <item>12.22</item>
+    </string-array>
+
+
+
+
+</resources>

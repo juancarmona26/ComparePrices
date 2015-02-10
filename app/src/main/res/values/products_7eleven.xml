@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="products_7eleven">
+        <item>bottle of milk 1L</item>
+        <item>bottle of water 500ml</item>
+        <item>yogurt 250ml</item>
+        <item>corn 1kg</item>
+        <item>Tomato 1kg</item>
+        <item>sugar 1kg</item>
+        <item>Soap</item>
+        <item>Shampoo</item>
+        <item>toothpaste</item>
+        <item>deodorant</item>
+
+    </string-array>
+
+    <string-array name="product_prices_7eleven">
+        <item>1.07</item>
+        <item>2.40</item>
+        <item>3.64</item>
+        <item>4.81</item>
+        <item>5.77</item>
+        <item>6.78</item>
+        <item>7.75</item>
+        <item>8.34</item>
+        <item>9.70</item>
+        <item>10.99</item>
+    </string-array>
+
+    <string-array name="code_products_7eleven">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+
+    </string-array>
+
+
+
+</resources>
