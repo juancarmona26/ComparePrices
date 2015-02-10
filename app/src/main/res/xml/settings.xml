@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/customization">
+        <EditTextPreference
+            android:key="username_preference"
+            android:title="@string/username_preference"
+            android:summary="@string/username_summary"/>
+        <EditTextPreference
+            android:key="email_preference"
+            android:title="@string/enter_email"
+            android:summary="@string/enter_email_summary"/>
+
+         <CheckBoxPreference
+             android:key="offers_preference"
+             android:title="@string/want_get_offers"
+             android:summary="@string/get_offers_summary"
+        />
+
+    </PreferenceCategory>
+</PreferenceScreen>

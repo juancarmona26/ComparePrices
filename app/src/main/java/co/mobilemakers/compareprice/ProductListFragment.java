@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.List;
 
 public class ProductListFragment extends ListFragment {
 
-    List<Product> products;
+    List<Product> mProducts;
     ArrayAdapter<Product> mArrayAdapater;
 
 
@@ -54,7 +55,14 @@ public class ProductListFragment extends ListFragment {
         if(getArguments() != null) {
             getResourcesXml(getArguments().getInt("marketId"));
         }
+        mArrayAdapater = new ProductAdapter(getActivity(), mProducts);
+        setListAdapter(mArrayAdapater);
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+            }
+        });
     }
 
     @Override
@@ -82,41 +90,43 @@ public class ProductListFragment extends ListFragment {
     private void getResourcesXml(int id) {
 
         switch (id) {
-            case 0: m7ElevenCode = getActivity().getResources().getStringArray(R.array.code_products_7eleven);
-                    m7ElevenPrices = getActivity().getResources().getStringArray(R.array.product_prices_7eleven);
-                    m7Elevenroducts = getActivity().getResources().getStringArray(R.array.products_7eleven);
+            case 0: mWalmartCode = getActivity().getResources().getStringArray(R.array.code_products_walmart);
+                    mWalmartPrices = getActivity().getResources().getStringArray(R.array.product_prices_walmart);
+                    mWalmartProducts = getActivity().getResources().getStringArray(R.array.products_walmart);
+                    prepareProduct(mWalmartCode, mWalmartPrices, mWalmartProducts);
 
-                prepareProduct(m7ElevenCode, m7ElevenPrices, m7Elevenroducts);
+
                 break;
 
             case 1: mHBOCode = getActivity().getResources().getStringArray(R.array.code_products_hbo);
                     mHBOPrices = getActivity().getResources().getStringArray(R.array.product_prices_hbo);
                     mHBOProducts = getActivity().getResources().getStringArray(R.array.products_hbo);
 
-                prepareProduct(mHBOCode, mHBOPrices, mHBOProducts);
+                    prepareProduct(mHBOCode, mHBOPrices, mHBOProducts);
 
                 break;
-            case 2: mWalmartCode = getActivity().getResources().getStringArray(R.array.code_products_walmart);
-                    mWalmartPrices = getActivity().getResources().getStringArray(R.array.product_prices_walmart);
-                    mWalmartProducts = getActivity().getResources().getStringArray(R.array.products_walmart);
-                    prepareProduct(mWalmartCode, mWalmartPrices, mWalmartProducts);
+            case 2: m7ElevenCode = getActivity().getResources().getStringArray(R.array.code_products_7eleven);
+                    m7ElevenPrices = getActivity().getResources().getStringArray(R.array.product_prices_7eleven);
+                    m7Elevenroducts = getActivity().getResources().getStringArray(R.array.products_7eleven);
+                prepareProduct(m7ElevenCode, m7ElevenPrices, m7Elevenroducts);
+
 
                 break;
-            default: products = new ArrayList<>();
+            default: mProducts = new ArrayList<>();
         }
 
     }
 
     private void prepareProduct(String[] productCode, String[] productPrice, String[] productNames) {
         Product product;
-        products = new ArrayList<>();
+        mProducts = new ArrayList<>();
         for (int i = 0; i < productNames.length; i++) {
             product = new Product();
             product.setId(i);
             product.setName(productNames[i]);
             product.setPrice(Double.parseDouble(productPrice[i]));
             product.setCode(productCode[i]);
-            products.add(product);
+            mProducts.add(product);
         }
     }
 

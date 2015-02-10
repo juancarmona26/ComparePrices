@@ -3,7 +3,12 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.mobilemakers.compareprice.MarketCreationFragment"
+    tools:context="co.mobilemakers.compareprice.MarketListActivity"
     android:orientation="vertical">
 
-    </LinearLayout>
+
+    <FrameLayout android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"></FrameLayout>
+</LinearLayout>

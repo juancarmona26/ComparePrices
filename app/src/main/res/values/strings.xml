@@ -14,5 +14,19 @@
     <string name="edit_text_market_name">Enter market name</string>
     <string name="text_view_add_market_title">Adding a market</string>
     <string name="text_view_empty_product_list">Add products for market</string>
+    <string name="title_activity_product_creation">ProductCreationActivity</string>
+    <string name="action_bar_title">Compare Price</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="username_preference">Enter your nickname</string>
+    <string name="username_summary">You can choose how the application call you.</string>
+    <string name="default_username">to you</string>
+    <string name="default_email" />
+    <string name="title_activity_app_settings">Settings</string>
+    <string name="welcome">Welcome: %s</string>
+    <string name="customization">Customization</string>
+    <string name="want_get_offers">Do you want receive offers to your e-mail?</string>
+    <string name="get_offers_summary">Check this if you are planning to receive offers from the web. Uncheck it otherwise</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_email_summary">If you want, you can share your comparisons, or only for the sake of obtain incredible promotions</string>
 
 </resources>
