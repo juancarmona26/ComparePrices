@@ -1,12 +1,14 @@
 package co.mobilemakers.compareprice;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -14,6 +16,7 @@ import java.util.List;
  */
 public class ProductAdapter extends ArrayAdapter<Product>{
 
+    private static final String LOG_TAG = ProductAdapter.class.getSimpleName();
     Context mContext;
     List<Product> products;
 
@@ -46,9 +49,13 @@ public class ProductAdapter extends ArrayAdapter<Product>{
     }
 
     private void showProduct(int position, View rowView) {
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        Log.d(LOG_TAG, "que pex: " + products.get(position).getName());
         TextView textViewProductName = (TextView) rowView.findViewById(R.id.text_view_product_name);
         TextView textViewProductPrice = (TextView) rowView.findViewById(R.id.text_view_product_price);
+        TextView textViewProductCode = (TextView) rowView.findViewById(R.id.text_view_product_code);
         textViewProductName.setText(products.get(position).getName());
-        textViewProductPrice.setText(String.valueOf("Price: " + products.get(position).getPrice()));
+        textViewProductPrice.setText(String.valueOf("Price: " + decimalFormat.format(products.get(position).getPrice())));
+        textViewProductCode.setText(products.get(position).getCode());
     }
 }

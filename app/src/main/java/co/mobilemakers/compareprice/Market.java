@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 public class Market implements Parcelable {
 
+    private int id;
     private String name;
     private String location;
 
@@ -25,6 +26,7 @@ public class Market implements Parcelable {
     }
 
     public Market(Parcel in){
+        id = in.readInt();
         name = in.readString();
         location = in.readString();
     }
@@ -45,6 +47,14 @@ public class Market implements Parcelable {
         this.location = location;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -52,6 +62,7 @@ public class Market implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
         dest.writeString(name);
         dest.writeString(location);
     }

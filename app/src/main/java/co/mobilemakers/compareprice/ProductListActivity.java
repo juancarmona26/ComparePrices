@@ -1,9 +1,7 @@
 package co.mobilemakers.compareprice;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 
 
 public class ProductListActivity extends ActionBarActivity {
@@ -13,33 +11,19 @@ public class ProductListActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
         if (savedInstanceState == null) {
+            Bundle bundle = null;
+            if(getIntent() != null ) {
+                bundle = new Bundle();
+                bundle.putInt("marketId",getIntent().getExtras().getInt("marketId"));
+            }
+
+            ProductListFragment productListFragment = new ProductListFragment();
+            productListFragment.setArguments(bundle);
+
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new ProductListFragment())
+                    .add(R.id.container, productListFragment)
                     .commit();
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_product_list, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 }

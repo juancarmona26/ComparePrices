@@ -66,6 +66,12 @@ public class MarketCreationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_market_creation, container, false);
         prepareView(rootView);
+        setViewEvents();
+        mButtonAddMarket.setEnabled(false);
+        return rootView;
+    }
+
+    private void setViewEvents() {
         mEditTextMarketName.addTextChangedListener(new ContentWatcher(FilledFields.MarketName));
         mEditTextMarketLocation.addTextChangedListener(new ContentWatcher(FilledFields.MarketLocation));
         mButtonAddMarket.setOnClickListener(new View.OnClickListener() {
@@ -82,8 +88,6 @@ public class MarketCreationFragment extends Fragment {
 
             }
         });
-        mButtonAddMarket.setEnabled(false);
-        return rootView;
     }
 
     private void prepareView(View rootView) {
